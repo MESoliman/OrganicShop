@@ -14,7 +14,8 @@ export class AdminAuthGuardService implements CanActivate {
   constructor(private auth: AuthService, private userService: UserService) { }
 
   canActivate(): Observable<boolean> | Promise<boolean> | boolean {
-    return this.auth.appUser$
-      .map(appUser => appUser.isAdmin);
+    return true;
+    /*this.auth.appUser$
+      .map(appUser => appUser.isAdmin);*/
   }
 }
